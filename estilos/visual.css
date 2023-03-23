@@ -6,6 +6,13 @@
     font-family: sans-serif;
 }
 
+.tamano_letra {
+  font-size: 17px;
+}
+
+.tamano_titulo {
+  font-size: 35px;
+}
 .flotar{
     float: left;
 }
@@ -48,3 +55,16 @@ ul {
   .active {
     background-color: #04AA6D;
   }
+
+  .contenedor_imagen {
+    max-width: 100%; 
+}
+
+.contenedor_imagen_img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+.txt_ajus {
+  font-size: 2vw; 
+}
