@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 .centrar {
     text-align: center;
+}
+
+.centrar2{
+  align-items: center;
+  justify-content: center;
 }
 
 .tipo_letra {
@@ -9,7 +15,7 @@
 }
 
 .tamano_letra {
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .tamano_titulo {
@@ -28,8 +34,8 @@
 }
 
 .tamano{
-    height: 432px;
-    width: 768px;
+    height: 500px;
+    width: 600px;
 }
 
 .contenedor_imagen {
@@ -101,11 +107,65 @@
   color: #f00;
 }
 
+#menu-icon{
+  font-size: 36px;
+  color: #fff;
+  display: none;
+}
+
+/* BREAKPOINTS */
+@media (max-width: 992px){
+  .header{
+    padding: 1.25rem 4%;
+  }
+}
+
+@media (max-width: 768px){
+  #menu-icon{
+    display: block;
+  }
+
+  .navbar{
+    position: fixed;
+    top: 100%;
+    left: 0;
+    widows: 100%;
+    padding: .5rem 4%;
+    display: none;
+  }
+
+  .navbar.active{
+    display: block;
+  }
+
+  .navbar a{
+    display: block;
+    margin: 1.5rem 0;
+  }
+
+  .nav-bg{
+    position: fixed;
+    top: 11.8%;
+    left: 0;
+    width: 100%;
+    height: 295px;
+    background: rgba(255, 255, 255, .1);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+  }
+
+  .nav-bg.active{
+    display: block;
+  }
+}
+
 body{
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 footer{
   background: #111;
@@ -179,52 +239,68 @@ img:hover{
   transition: .5s;
 }
 
-.slider-wrapper{
-  position: relative;
-  max-width: 48rem;
-  margin: 0 auto;
+.card{
+  margin: 20px;
+  width: 200px;
+  height: 300px;
+  border-radius: 5px;
+  background: var(--i);
+  background-size: cover;
+  box-shadow: 3px 5px 5px rgba(3, 32, 51, .8);
 }
 
-.slider{
+.contenido{
+  width: 100%;
+  height: 100%;
   display: flex;
-  aspect-ratio: 16 / 9;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-  border-radius: .5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .4);
+  opacity: 0;
+  transition: .5s;
 }
 
-.slider img{
-  flex: 1 0 100%;
-  scroll-snap-align: start;
-  width: auto;
-  height: auto;
+.contenido h2, a{
+  color: rgba(255, 255, 255, .8);
+  margin: 10px 0;
 }
 
-.slider-nav{
-  display: flex;
-  column-gap: 1rem;
-  position: absolute;
-  bottom: 1.25rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-.slider-nav a{
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background-color: #fff;
-  opacity: 0.75;
-  transition: opacity ease 250ms;
-}
-
-.slider-nav a:hover{
+.card:hover .contenido{
   opacity: 1;
 }
 
-.contenedor{
-  padding: 2rem;
+.tarjeta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 380px;
+  background-color: #fff;
+  box-shadow: 0, 15px 45px rgba(0, 0, 0, .25);
+  overflow: hidden;
+  transition: 0.5s ease-in-out
 }
+
+.tarjeta:hover{
+  width: 600px;
+}
+
+.tarjeta .imgBox{
+  position: relative;
+  min-height: 300px;
+  width: 300px;
+  height: 100px;
+  display: 
+  flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+
+.tarjeta .descripcion{
+  position: relative;
+  min-width: 300px;
+  background: #4ba9e9;
+}
+
