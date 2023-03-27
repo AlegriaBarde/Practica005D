@@ -157,6 +157,10 @@
     background: rgba(0, 0, 0, 0.1);
   }
 
+  .navbar a:hover{
+    color: #f00;
+  }
+
   .nav-bg{
     position: fixed;
     top: 11.8%;
@@ -323,10 +327,6 @@ img:hover{
   }
 }
 
-@media (max-width: 858px){
-  .checkbtn{
-      display: block;
-  }
   ul{
       position: fixed;
       width: 100%;
