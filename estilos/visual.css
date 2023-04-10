@@ -320,9 +320,6 @@ img:hover{
 }
 
 @media (max-width: 858px){
-  .checkbtn{
-      display: block;
-  }
   ul{
       position: fixed;
       width: 100%;
